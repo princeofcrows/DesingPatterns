@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DynamicDataRepository implements Container {
-    private List<String> dataCollection = new ArrayList<String>();
+    private final List<String> dataCollection = new ArrayList<>();
     @Override
     public Iterator getIterator() {
         return new DynamicDataIterator(this);
@@ -21,9 +21,9 @@ public class DynamicDataRepository implements Container {
         return dataCollection.remove(last);
     }
 
-    public class DynamicDataIterator implements Iterator {
+    public static class DynamicDataIterator implements Iterator {
         private int index = 0;
-        private DynamicDataRepository dataRepository;
+        private final DynamicDataRepository dataRepository;
 
 
         public DynamicDataIterator(DynamicDataRepository dataRepository) {

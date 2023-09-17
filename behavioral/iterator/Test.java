@@ -27,15 +27,13 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("Static Data Iterator---");
 
-        var staticRepo = new StaticDataRepository();
-        staticRepo = (StaticDataRepository) initRepo(staticRepo);
+        var staticRepo = (StaticDataRepository) initRepo(new StaticDataRepository());
 
         iterate(staticRepo);
 
         System.out.println("Dynamic Data Iterator---");
 
-        var dynamicRepo = new DynamicDataRepository();
-        dynamicRepo = (DynamicDataRepository) initRepo(dynamicRepo);
+        var dynamicRepo = (DynamicDataRepository) initRepo(new DynamicDataRepository());
 
         iterate(dynamicRepo);
     }

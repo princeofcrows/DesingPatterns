@@ -1,8 +1,8 @@
 package behavioral.iterator;
 
-public interface Iterator<T> {
+public interface Iterator {
     boolean hasNext();
     void next();
-    T current();
+    String current();
     void root();
 }

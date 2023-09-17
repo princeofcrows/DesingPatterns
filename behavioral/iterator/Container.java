@@ -1,7 +1,7 @@
 package behavioral.iterator;
 
-public interface Container<T> {
+public interface Container {
     Iterator getIterator();
     void add(String data) ;
-    T remove() ;
+    String remove() ;
 }

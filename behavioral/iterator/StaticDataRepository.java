@@ -3,7 +3,7 @@ package behavioral.iterator;
 
 public class StaticDataRepository implements Container {
     public static final int LIMIT = 10;
-    private String[] dataCollection = new String[LIMIT];
+    private final String[] dataCollection = new String[LIMIT];
     private int currentIndex = 0;
 
     @Override
@@ -25,9 +25,9 @@ public class StaticDataRepository implements Container {
     }
 
 
-    public class StaticDataIterator implements Iterator {
+    public static class StaticDataIterator implements Iterator {
         private int index = 0;
-        private StaticDataRepository dataRepository;
+        private final StaticDataRepository dataRepository;
 
         public StaticDataIterator(StaticDataRepository dataRepository) {
             this.dataRepository = dataRepository;
@@ -44,7 +44,7 @@ public class StaticDataRepository implements Container {
         }
 
         @Override
-        public Object current() {
+        public String current() {
             return dataRepository.dataCollection[index];
         }
 
