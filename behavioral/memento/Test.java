@@ -1,6 +1,6 @@
 package behavioral.memento;
 
-public class Main {
+public class Test {
     public static void main(String[] args) {
         var editor = new Originator("");
         var history = new CareTaker();
