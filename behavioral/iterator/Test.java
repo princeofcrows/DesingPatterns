@@ -8,7 +8,7 @@ public class Test {
         return repo;
     }
 
-    public static void iterrate(Container repo) {
+    public static void iterate(Container repo) {
         var itr = repo.getIterator();
         while (itr.hasNext()) {
             System.out.println(itr.current());
@@ -30,13 +30,13 @@ public class Test {
         var staticRepo = new StaticDataRepository();
         staticRepo = (StaticDataRepository) initRepo(staticRepo);
 
-        iterrate(staticRepo);
+        iterate(staticRepo);
 
         System.out.println("Dynamic Data Iterator---");
 
         var dynamicRepo = new DynamicDataRepository();
         dynamicRepo = (DynamicDataRepository) initRepo(dynamicRepo);
 
-        iterrate(dynamicRepo);
+        iterate(dynamicRepo);
     }
 }
