@@ -25,7 +25,6 @@ public class DynamicDataRepository implements Container {
         private int index = 0;
         private final DynamicDataRepository dataRepository;
 
-
         public DynamicDataIterator(DynamicDataRepository dataRepository) {
             this.dataRepository = dataRepository;
         }
