@@ -6,12 +6,12 @@ public class Ellipsoid extends Shape {
         super(x, y);
     }
 
-    double errorPercentage(double value, double target) {
-        return Math.abs(value - target) / target * 100.0;
+    double errorPercentage(double value) {
+        return Math.abs(value - 1.0)  * 100.0;
     }
 
     boolean isBelowAccepted(double value) {
-        double ACCEPTED = 5.0;
+        double ACCEPTED = 15.0;
         return value <= ACCEPTED;
     }
     @Override
@@ -20,7 +20,8 @@ public class Ellipsoid extends Shape {
         double yDiff = y * y / this.y / this.y;
         double totalDiff = xDiff + yDiff;
 
-        return isBelowAccepted(errorPercentage(totalDiff, 1.0));
+
+        return isBelowAccepted(errorPercentage(totalDiff));
     }
 
     @Override

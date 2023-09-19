@@ -3,7 +3,7 @@ package creational.factory.creator;
 import creational.factory.product.Shape;
 
 public abstract class Tool {
-    private Shape shape;
+    private final Shape shape;
 
     public Tool(double x, double y) {
         this.shape = createShape(x, y);
@@ -15,7 +15,7 @@ public abstract class Tool {
 
         for(double y = -y1; y<= y1; y+=1.0) {
             StringBuilder line = new StringBuilder();
-            double x1 = 20.0;
+            double x1 = 50.0;
 
             for (double x = -x1; x<= x1; x+=1.0) {
                 if(shape.renderPoint(x, y)) line.append("*");
