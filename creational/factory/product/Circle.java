@@ -12,4 +12,7 @@ public class Circle implements Shape {
         System.out.println("Rendering a Circle of radius " + radius);
     }
 
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
 }

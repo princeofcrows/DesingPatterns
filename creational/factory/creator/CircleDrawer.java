@@ -4,13 +4,17 @@ import creational.factory.product.Circle;
 import creational.factory.product.Shape;
 
 public class CircleDrawer extends Tool{
-    int radius;
+   Circle circle;
     public CircleDrawer(int radius) {
-        this.radius = radius;
+        circle = new Circle(radius);
     }
 
     @Override
     protected Shape createShape() {
-        return new Circle(radius);
+        return circle;
+    }
+
+    public void resize(int radius) {
+        circle.setRadius(radius);
     }
 }

@@ -11,5 +11,11 @@ public class Test {
 
         var rectDrawer = new RectangleDrawer(10, 11);
         rectDrawer.drawShape();
+
+        circleDrawer.resize(98);
+        circleDrawer.drawShape();
+
+        rectDrawer.resize(111, 222);
+        rectDrawer.drawShape();
     }
 }

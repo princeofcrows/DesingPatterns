@@ -4,17 +4,20 @@ import creational.factory.product.Rectangle;
 import creational.factory.product.Shape;
 
 public class RectangleDrawer extends Tool{
-    int width;
-    int height;
+    Rectangle rectangle;
 
     public RectangleDrawer(int width, int height) {
-        this.width = width;
-        this.height = height;
+        rectangle = new Rectangle(width, height);
     }
 
 
     @Override
     protected Shape createShape() {
-        return new Rectangle(10, 10);
+        return  rectangle;
+    }
+
+    public void resize(int width, int heigth) {
+        rectangle.setHeight(heigth);
+        rectangle.setWidth(width);
     }
 }
