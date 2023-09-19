@@ -1,24 +1,33 @@
 package creational.factory.product;
 
-public class Rectangle implements Shape {
-    int width;
-    int height;
+public class Rectangle extends Shape {
 
-    public Rectangle(int width, int height) {
-        this.width = width;
-        this.height = height;
+    public Rectangle(double x, double y) {
+        super(x, y);
     }
 
     @Override
-    public void render() {
-        System.out.println("Rendering a Rectangle of Width " + width + " & height " + height);
+    public boolean renderPoint(double x, double y) {
+        double OFFSET_X = 0;
+        double OFFSET_Y = 0;
+
+        if( x == OFFSET_X) {
+            return (y >= OFFSET_Y) && (y <= OFFSET_Y + this.y);
+        } else if(x == OFFSET_X + this.x) {
+            return (y >= OFFSET_Y) && (y <= OFFSET_Y + this.y);
+        }
+
+        if( y == OFFSET_Y) {
+            return (x >= OFFSET_X) && (x <= OFFSET_X + this.x);
+        } else if(y == OFFSET_Y + this.y) {
+            return (x >= OFFSET_X) && (x <= OFFSET_X + this.x);
+        }
+
+        return false;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
+    @Override
+    public String getLabel() {
+        return "Rectangle";
     }
 }
