@@ -9,6 +9,8 @@ public class Test {
         ellipsoidDrawer.drawShape();
         ellipsoidDrawer.resize(5.0, 4.0);
         ellipsoidDrawer.drawShape();
+        ellipsoidDrawer.resize(6.0, 6.0);
+        ellipsoidDrawer.drawShape();
 
 
         var rectDrawer = new RectangleDrawer(4, 2);
