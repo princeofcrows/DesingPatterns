@@ -1,6 +1,6 @@
-package creational.chainOfResponsibility.actions;
+package behavioral.chainOfResponsibility.actions;
 
-import creational.chainOfResponsibility.elements.Request;
+import behavioral.chainOfResponsibility.elements.Request;
 
 public abstract class Handler {
     private final Handler next;

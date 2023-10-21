@@ -1,10 +1,10 @@
-package creational.visitor;
+package behavioral.visitor;
 
-import creational.visitor.element.Document;
-import creational.visitor.element.JsonElement;
-import creational.visitor.element.XmlElement;
-import creational.visitor.operation.Parse;
-import creational.visitor.operation.Print;
+import behavioral.visitor.element.Document;
+import behavioral.visitor.element.JsonElement;
+import behavioral.visitor.element.XmlElement;
+import behavioral.visitor.operation.Parse;
+import behavioral.visitor.operation.Print;
 
 public class Test {
     public static void main(String[] args) {

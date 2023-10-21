@@ -1,7 +1,7 @@
-package creational.visitor.operation;
+package behavioral.visitor.operation;
 
-import creational.visitor.element.JsonElement;
-import creational.visitor.element.XmlElement;
+import behavioral.visitor.element.JsonElement;
+import behavioral.visitor.element.XmlElement;
 
 public class Parse implements Operation{
     @Override

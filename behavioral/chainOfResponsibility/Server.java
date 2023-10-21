@@ -1,7 +1,7 @@
-package creational.chainOfResponsibility;
+package behavioral.chainOfResponsibility;
 
-import creational.chainOfResponsibility.actions.Handler;
-import creational.chainOfResponsibility.elements.Request;
+import behavioral.chainOfResponsibility.actions.Handler;
+import behavioral.chainOfResponsibility.elements.Request;
 
 public class Server {
     private final Handler handler;

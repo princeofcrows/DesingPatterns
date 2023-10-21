@@ -1,9 +1,9 @@
-package creational.chainOfResponsibility;
+package behavioral.chainOfResponsibility;
 
-import creational.chainOfResponsibility.actions.Authenticator;
-import creational.chainOfResponsibility.actions.Logger;
-import creational.chainOfResponsibility.actions.Validator;
-import creational.chainOfResponsibility.elements.Request;
+import behavioral.chainOfResponsibility.actions.Authenticator;
+import behavioral.chainOfResponsibility.actions.Logger;
+import behavioral.chainOfResponsibility.actions.Validator;
+import behavioral.chainOfResponsibility.elements.Request;
 
 public class Test {
     public static void main(String[] args) {

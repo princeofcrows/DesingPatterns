@@ -1,6 +1,6 @@
-package creational.visitor.element;
+package behavioral.visitor.element;
 
-import creational.visitor.operation.Operation;
+import behavioral.visitor.operation.Operation;
 
 import java.util.ArrayList;
 import java.util.List;
