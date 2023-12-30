@@ -1,9 +1,9 @@
 package behavioral.mediator;
 
 public class ArticlesDialogBox {
-    private ListBox articleListBox = new ListBox();
-    private TextBox titleTextBox = new TextBox();
-    private Button saveButton = new Button();
+    private final ListBox articleListBox = new ListBox();
+    private final TextBox titleTextBox = new TextBox();
+    private final Button saveButton = new Button();
 
     public ArticlesDialogBox() {
         articleListBox.addEventHandler(this::articleSelected);
